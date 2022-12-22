@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
+import 'description_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,25 +33,14 @@ class MyApp extends StatelessWidget {
               ),
               bottomOpacity: 100,
             ),
-            body: Stack(
-              fit: StackFit.expand,
+            body:
+            Column(
               children: [
-                FittedBox(
-                  child: Image.asset('assets/images/Eiffel_tower.jpg'),
-                  fit: BoxFit.fill,
-                ),
-                Center(
-                  child: Container(
-                    height: 100,
-                    color: Color.fromRGBO(0, 0, 0, 0.5),
-                    child: Center(
-                      child: Text('Paris',
-                          style: TextStyle(fontSize: 40, color: Colors.white)),
-                    ),
-                  ),
-                )
+                new DescriptionPlace(),
+                new DescriptionText(),
               ],
             )
+
             // <-- SEE HERE
             ));
   }
